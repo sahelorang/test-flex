@@ -1,0 +1,23 @@
+.img-text {
+  position: relative;
+}
+
+.text-in-img {
+  position: absolute;
+  bottom: 45px;
+  right: 35px;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.padding-5 {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.shadow-img {
+  filter: brightness(50%);
+}
