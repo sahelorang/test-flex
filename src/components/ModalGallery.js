@@ -26,24 +26,33 @@ const myArray = [
   {
     src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX8-P87Fqsgi7Nd0e-fJH4vMr7saqkjGho9g&usqp=CAU",
   },
-  // {
-  //   src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX8-P87Fqsgi7Nd0e-fJH4vMr7saqkjGho9g&usqp=CAU",
-  // },
-  // {
-  //   src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX8-P87Fqsgi7Nd0e-fJH4vMr7saqkjGho9g&usqp=CAU",
-  // },
-  // {
-  //   src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX8-P87Fqsgi7Nd0e-fJH4vMr7saqkjGho9g&usqp=CAU",
-  // },
-  // {
-  //   src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX8-P87Fqsgi7Nd0e-fJH4vMr7saqkjGho9g&usqp=CAU",
-  // },
-  // {
-  //   src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX8-P87Fqsgi7Nd0e-fJH4vMr7saqkjGho9g&usqp=CAU",
-  // },
-  // {
-  //   src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX8-P87Fqsgi7Nd0e-fJH4vMr7saqkjGho9g&usqp=CAU",
-  // },
+
+  {
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX8-P87Fqsgi7Nd0e-fJH4vMr7saqkjGho9g&usqp=CAU",
+  },
+
+  {
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUIbgfg9vZrfRRrlBNAYzWr8XYpyL2pF736g&usqp=CAU",
+  },
+  {
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX8-P87Fqsgi7Nd0e-fJH4vMr7saqkjGho9g&usqp=CAU",
+  },
+  {
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX8-P87Fqsgi7Nd0e-fJH4vMr7saqkjGho9g&usqp=CAU",
+  },
+  {
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX8-P87Fqsgi7Nd0e-fJH4vMr7saqkjGho9g&usqp=CAU",
+  },
+
+  {
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUIbgfg9vZrfRRrlBNAYzWr8XYpyL2pF736g&usqp=CAU",
+  },
+  {
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX8-P87Fqsgi7Nd0e-fJH4vMr7saqkjGho9g&usqp=CAU",
+  },
+  {
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX8-P87Fqsgi7Nd0e-fJH4vMr7saqkjGho9g&usqp=CAU",
+  },
 ];
 
 // while (0 < myArray.length) {
@@ -102,23 +111,25 @@ export const matrixMaker = (list, elementsPerSubArray) => {
 const ModalGallery = () => {
   return (
     <div className="col-10  ">
-      <div className="col-6  ">
-        <div className="col-12 d-flex" style={{ flexWrap: "wrap " }}>
-          <div class="row">
-            {matrixMaker([...myArray, ...myArray], 4).map((subArray, index) => (
-              <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
-                {subArray.map((item) => (
-                  <>
-                    <img
-                      src={item.src}
-                      class="w-100  rounded mb-4"
-                      alt="Boat on Calm Water"
-                    />
-                  </>
-                ))}
-              </div>
-            ))}
-          </div>
+      <div className="col-12 ">
+        <div class="row  ">
+          {matrixMaker([...myArray], 2).map((subArray, index) => (
+            <div
+              class="col-3  mb-4  "
+              style={{ flexWrap: "wrap", display: "flex" }}
+            >
+              {subArray.map((item) => (
+                <>
+                  <img
+                    key={index}
+                    src={item.src}
+                    class="w-100  rounded mb-4 d-inline-flex "
+                    alt="picture"
+                  />
+                </>
+              ))}
+            </div>
+          ))}
         </div>
       </div>
     </div>
